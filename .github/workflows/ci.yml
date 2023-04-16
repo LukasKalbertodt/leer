@@ -1,0 +1,29 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches: [ main ]
+
+env:
+  RUSTFLAGS: --deny warnings
+
+jobs:
+  style:
+    name: Check basic style
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - uses: LukasKalbertodt/check-basic-style@v0.1
+
+  check:
+    name: 'Build & test'
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - run: cargo build
+    - run: cargo test
+    - run: cargo doc
+    - run: cargo build --features=derive
+    - run: cargo test --features=derive
+    - run: cargo doc --features=derive
