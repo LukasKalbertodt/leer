@@ -30,25 +30,6 @@
 //! let vec: std::collections::LinkedList<_> = one_two_three();
 //! ```
 //!
-//! Deriving (with `derive` feature enabled):
-//!
-//! ```
-//! use leer::Empty;
-//!
-//! #[derive(Empty)]
-//! struct Zoo {
-//!     foxes: Vec<Fox>,
-//!     elephants: Vec<Elephant>,
-//! }
-//!
-//! struct Fox;
-//! struct Elephant;
-//!
-//!
-//! let empty_zoo = Zoo::empty();
-//! ```
-//!
-//!
 //! ## Crate features
 //!
 //! - `derive`: if enabled, you can `#[derive(Empty)]` for structs.
@@ -75,7 +56,24 @@ pub trait Empty {
 /// that you sometimes have to add a global `Empty` bound to your parameter or
 /// implement `Empty` manually.
 ///
-/// ## Example
+/// ## Examples
+///
+/// ```
+/// use leer::Empty;
+///
+/// #[derive(Empty)]
+/// struct Zoo {
+///     foxes: Vec<Fox>,
+///     elephants: Vec<Elephant>,
+/// }
+///
+/// struct Fox;
+/// struct Elephant;
+///
+///
+/// let empty_zoo = Zoo::empty();
+/// ```
+///
 ///
 /// ```
 /// use leer::Empty;
