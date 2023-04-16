@@ -25,3 +25,7 @@ leer-macros = { version = "=0.0.1", path = "macros", optional = true }
 [[test]]
 name = "derive"
 required-features = ["derive"]
+
+
+[package.metadata.docs.rs]
+all-features = true
