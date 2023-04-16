@@ -1,0 +1,22 @@
+[package]
+name = "leer"
+authors = ["Lukas Kalbertodt <lukas.kalbertodt@gmail.com>"]
+version = "0.1.0"
+edition = "2021"
+
+description = "Tiny trait to abstract over types that have a notion of “being empty”."
+documentation = "https://docs.rs/leer/"
+repository = "https://github.com/LukasKalbertodt/leer/"
+readme = "README.md"
+license = "MIT/Apache-2.0"
+
+keywords = ["empty", "vacant", "trait", "abstraction"]
+categories = ["command-line-interface"]
+exclude = [".github"]
+
+
+[features]
+derive = ["leer-macros"]
+
+[dependencies]
+leer-macros = { version = "=0.0.1", path = "macros", optional = true }

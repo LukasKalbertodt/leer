@@ -1,0 +1,19 @@
+[package]
+name = "leer-macros"
+authors = ["Lukas Kalbertodt <lukas.kalbertodt@gmail.com>"]
+version = "0.0.1"
+edition = "2021"
+
+description = """
+Helper crate for `leer`. Please see the docs of `leer` for more information. Do
+not use this crate directly, API stability is not guaranteed!
+"""
+repository = "https://github.com/LukasKalbertodt/leer/"
+license = "MIT/Apache-2.0"
+
+[lib]
+proc-macro = true
+
+[dependencies]
+syn = "1.0"
+quote = "1.0"
