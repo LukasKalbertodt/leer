@@ -1,7 +1,7 @@
 [package]
 name = "leer"
 authors = ["Lukas Kalbertodt <lukas.kalbertodt@gmail.com>"]
-version = "0.1.0"
+version = "0.1.1"
 edition = "2021"
 
 description = "Tiny trait to abstract over types that have a notion of “being empty”."
