@@ -20,3 +20,8 @@ derive = ["leer-macros"]
 
 [dependencies]
 leer-macros = { version = "=0.0.1", path = "macros", optional = true }
+
+
+[[test]]
+name = "derive"
+required-features = ["derive"]
